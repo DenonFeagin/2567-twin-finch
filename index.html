@@ -29,11 +29,11 @@
 
 <!-- HEADER -->
 <header>
-	<div>
+	<div id="navbar-default">
 		<div class="wrapper">
 			<div class="row">
 				<div class="col-1-9">
-					<h1><a href="#"><img src="img/twin-finch-logo.png" alt=""></a></h1>
+					<h1><a href="#"><img src="img/twin-finch-logo.png" alt="Twin Finch Roastery"></a></h1>
 				</div>
 				<nav class="col-1-4 smooth-scroll f-right">
 					<ul>
@@ -45,7 +45,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="wrapper">
+	<div class="wrapper" id="startchange">
 		<p>An authentic micro-roastery; small, dedicated, and highly focused on quality</p>
 	</div>
 </header>
@@ -94,7 +94,7 @@
 			<div class="col-1-2"> <!-- HOUSE BLEND -->
 				<div> <!-- image and the black callout box -->
 					<div class="col-1-6"> <!-- LITTLE BLACK BOX -->
-						<p>Our house belnd was rated a 98 by coffeereview.com!</p>
+						<p><a href="https://coffeereview.com" target="_blank">Our house blend was rated a 98 by coffeereview.com!</a></p>
 					</div>
 				</div>
 				<div> <!-- background color -->
@@ -176,7 +176,7 @@
 				<p>Our coffee is roasted in a <span>hot air, refractory</span> lined roaster with an extraordinarylevel of control. The significance of relying on a high volume of hot air toroast coffee beans can't be understated. Most small coffee roasters use asingle stage burner which offers virtually no control during the roasting process.The refractory <span>significantly reduces hot spots</span> which can damage coffee beans and produces a much more even roasting environment.</p>
 				<p>To learn how to brew the perfect up from your own home, we encourage you to read our <a href="https://google.com" target="_blank">How To Brew article</a> that describes the pathway to the best experience with Twin Finch coffee.</p>
 			</div>
-			<!-- IMAGE -->
+			<div class="col-1-2"><!-- IMAGE --></div>
 		</div>
 	</div>
 </section>
@@ -254,7 +254,7 @@
 	</div>
 </footer>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> 
 <script>
 jQuery(document).ready(function($){
 	
@@ -279,6 +279,23 @@ jQuery(document).ready(function($){
 
 	
 });
+	
+jQuery(document).ready(function(){       
+   var scroll_start = 0;
+   var startchange = $('#startchange');
+   var offset = startchange.offset();
+    if (startchange.length){
+jQuery(document).scroll(function() { 
+      scroll_start = $(this).scrollTop();
+      if(scroll_start > offset.top) {
+          $("#navbar-default").css('background-color', '#f0f0f0');
+       } else {
+          $('#navbar-default').css('background-color', 'transparent');
+       }
+   });
+    }
+});
+	
 </script>
 
 </body>
