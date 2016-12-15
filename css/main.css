@@ -1,8 +1,6 @@
 @charset "UTF-8";
 /* CSS Document */
 
-/*------- YAY FOR PEER CODE REVIEWS! --------*/
-
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
@@ -110,6 +108,7 @@ body > header p {
 
 blockquote p {
 	font-size: 1.44rem;
+	line-height: 1.8rem;
 }
 
 blockquote footer p a {
@@ -119,6 +118,10 @@ blockquote footer p a {
 
 #products header p {
 	padding: 0 50px;
+}
+
+#products p, #about p, section.wrapper div.col-1-2 p {
+	line-height: 1.6rem;
 }
 
 /*--------------------------------------------------------------
@@ -170,6 +173,11 @@ input, textarea {
 	font-family: 'Raleway', sans-serif;
 	height: 35px;
 	width: 60%;
+}
+
+:-moz-input-placeholder {
+	color: #fff;
+	padding-left: 8px;
 }
 
 ::-moz-input-placeholder {
